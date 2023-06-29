@@ -2,7 +2,11 @@ import 'package:dating_demo_flutter/views/home_module/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+import 'Utills/helpers/db_helper.dart';
+
+Future<void> main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await DatabaseHelper().initDB();
   runApp(const MyApp());
 }
 

@@ -12,7 +12,7 @@ class BottomNavBar extends StatelessWidget {
   final _controller = Get.put(BottomNavController());
   final screens = [
      HomeScreen(),
-    const MatchesScreen(),
+     MatchesScreen(),
     const ChatScreen(),
     const ProfileScreen(),
   ];
@@ -45,7 +45,7 @@ class BottomNavBar extends StatelessWidget {
               //  backgroundColor: darkGreen,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.favorite),
               label: "Match",
               //  backgroundColor: darkPink,
             ),

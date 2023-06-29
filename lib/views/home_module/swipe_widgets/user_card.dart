@@ -81,22 +81,23 @@ class ExampleCard extends StatelessWidget {
                     children: [
                   Row(
                     children: [
-                   Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                          "$name, $age",
-                          style:const TextStyle(fontSize: 25,
-                              fontWeight: FontWeight.w500,color: Colors.white)
-                      ),
-                      const SizedBox(height: 5,),
-                      Text(title,
-                          style:const TextStyle(fontSize: 17,
-                              fontWeight: FontWeight.w400,color: Colors.white)
-                      ),
-                    ],
+                      Expanded(
+                     child: Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                            "$name, $age",
+                            style:const TextStyle(fontSize: 25,
+                                fontWeight: FontWeight.w500,color: Colors.white)
+                        ),
+                        const SizedBox(height: 5,),
+                        Text(title,
+                            style:const TextStyle(fontSize: 17,
+                                fontWeight: FontWeight.w400,color: Colors.white)
+                        ),
+                      ],
                   ),
-                      const Spacer(),
+                   ),
                       Container(
                         padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(

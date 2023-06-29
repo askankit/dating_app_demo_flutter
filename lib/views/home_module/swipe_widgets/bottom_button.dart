@@ -42,14 +42,14 @@ class BottomButtonsRow extends StatelessWidget {
               _BottomButton(
                 color: Colors.white,
                 onPressed: () {
-                  onSwipe(SwipeDirection.up);
+                  onSwipe(SwipeDirection.right);
                 },
                 child: const Icon(Icons.favorite,color: Colors.pinkAccent,),
               ),
               _BottomButton(
                 color: Colors.white ,
                 onPressed: () {
-                  onSwipe(SwipeDirection.right);
+                  onSwipe(SwipeDirection.up);
                 },
                 child: const Icon(Icons.switch_access_shortcut),
               ),

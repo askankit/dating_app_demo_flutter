@@ -16,25 +16,25 @@ class CardLabel extends StatelessWidget {
   factory CardLabel.right() {
     return const CardLabel._(
       color: SwipeDirectionColor.right,
-      label: 'RIGHT',
+      label: Icons.favorite,
       angle: -_labelAngle,
-      alignment: Alignment.topLeft,
+      alignment: Alignment.center,
     );
   }
 
   factory CardLabel.left() {
     return const CardLabel._(
       color: SwipeDirectionColor.left,
-      label: 'LEFT',
+      label: Icons.close,
       angle: _labelAngle,
-      alignment: Alignment.topRight,
+      alignment: Alignment.center,
     );
   }
 
   factory CardLabel.up() {
     return const CardLabel._(
       color: SwipeDirectionColor.up,
-      label: 'UP',
+      label: Icons.switch_access_shortcut,
       angle: _labelAngle,
       alignment: Alignment(0, 0.5),
     );
@@ -43,14 +43,14 @@ class CardLabel extends StatelessWidget {
   factory CardLabel.down() {
     return const CardLabel._(
       color: SwipeDirectionColor.down,
-      label: 'DOWN',
+      label: Icons.switch_access_shortcut,
       angle: -_labelAngle,
       alignment: Alignment(0, -0.75),
     );
   }
 
   final Color color;
-  final String label;
+  final IconData label;
   final double angle;
   final Alignment alignment;
 
@@ -58,9 +58,10 @@ class CardLabel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: alignment,
+      color: color.withOpacity(0.4),
       padding: const EdgeInsets.symmetric(
-        vertical: 36,
-        horizontal: 36,
+        vertical: 30,
+        horizontal: 30,
       ),
       child: Transform.rotate(
         angle: angle,
@@ -71,10 +72,11 @@ class CardLabel extends StatelessWidget {
               width: 4,
             ),
             color: Colors.white,
-            borderRadius: BorderRadius.circular(4),
+            shape: BoxShape.circle,
+           // borderRadius: BorderRadius.circular(4),
           ),
           padding: const EdgeInsets.all(6),
-          child: Text(
+          child:  Icon(label)/*Text(
             label,
             style: TextStyle(
               fontSize: 32,
@@ -83,7 +85,7 @@ class CardLabel extends StatelessWidget {
               color: color,
               height: 1,
             ),
-          ),
+          ),*/
         ),
       ),
     );
